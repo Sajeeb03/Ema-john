@@ -1,28 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../context/UserContext';
 import logo from '../../images/Logo.svg'
 import './Header.css'
 
 const Header = () => {
+    const { logOut, user } = useContext(AuthContext);
     const showItems = () => {
         const items = document.getElementById('items');
         items.style.display = "block"
     }
     return (
         <nav className='header'>
-            <img src={logo} alt="" />
+            <Link to='/'><img src={logo} alt="" /></Link>
             <div id='nav-items' className='nav-items'>
-                <a href="/shop">Shop</a>
-                <a href="/order">Order</a>
-                <a href="/inventory">Inventory</a>
-                <a href="/about">About</a>
+                <NavLink to="/shop">Shop</NavLink>
+                <NavLink to="/orders">Orders</NavLink>
+                <NavLink to="/inventory">Inventory</NavLink>
+                <NavLink to="/about">About</NavLink>
+                {user?.uid ? <button onClick={logOut} className='btn-logout'>Sign Out</button> : <><NavLink to="/signup">SignUp</NavLink>
+                    <NavLink to="/login">Login</NavLink></>
+                }
             </div>
 
             <i onClick={showItems} className="fa-solid fa-bars bar"></i>
             <ul id='items' className='items'>
-                <li><a href="/shop">Shop</a></li>
-                <li><a href="/order">Order</a></li>
-                <li><a href="/inventory">Inventory</a></li>
-                <li><a href="/about">About</a></li>
+                <NavLink to="/shop">Shop</NavLink>
+                <NavLink to="/orders">Orders</NavLink>
+                <NavLink to="/inventory">Inventory</NavLink>
+                <NavLink to="/about">About</NavLink>
             </ul>
 
 

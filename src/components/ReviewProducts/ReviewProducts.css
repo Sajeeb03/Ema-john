@@ -1,0 +1,44 @@
+.review-image img {
+    width: 91px;
+    border-radius: 6px;
+}
+
+.details-container {
+    display: flex;
+    border: 1px solid rgba(149, 160, 167, 1);
+    border-radius: 8px;
+    padding: 8px;
+    width: 571px;
+    margin: 21px auto;
+}
+
+.review-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 17px;
+}
+
+.review-details p,
+h4 {
+    margin: 0;
+}
+
+.trash-icon {
+    width: 37.71px;
+    height: 37.71px;
+    color: rgba(235, 87, 87, 1);
+}
+
+.delete-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgba(235, 87, 87, 0.3);
+}
+
+.delete-container {
+    display: flex;
+    align-items: center;
+}
