@@ -21,13 +21,8 @@ function App() {
         {
           path: '/',
           element: <Shop />,
-          loader: () => fetch('products.json'),
 
-        },
-        {
-          path: 'shop',
-          element: <Shop />,
-          loader: () => fetch('products.json')
+
         },
         {
           path: 'orders',

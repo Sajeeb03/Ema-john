@@ -20,6 +20,20 @@
     border: 2px solid slateblue;
 }
 
+.pagination {
+    margin-left: 200px;
+    margin-bottom: 60px;
+}
+
+.pagination button {
+    margin-right: 20px;
+}
+
+.selected {
+    background-color: orange;
+    padding: 8px;
+    width: 40px;
+}
 @media screen and (max-width:1400px) {
     .products-container {
         grid-template-columns: repeat(2, 1fr);

@@ -14,7 +14,7 @@ const Header = () => {
         <nav className='header'>
             <Link to='/'><img src={logo} alt="" /></Link>
             <div id='nav-items' className='nav-items'>
-                <NavLink to="/shop">Shop</NavLink>
+                <NavLink to="/">Shop</NavLink>
                 <NavLink to="/orders">Orders</NavLink>
                 <NavLink to="/inventory">Inventory</NavLink>
                 <NavLink to="/about">About</NavLink>
@@ -25,7 +25,7 @@ const Header = () => {
 
             <i onClick={showItems} className="fa-solid fa-bars bar"></i>
             <ul id='items' className='items'>
-                <NavLink to="/shop">Shop</NavLink>
+                <NavLink to="/">Shop</NavLink>
                 <NavLink to="/orders">Orders</NavLink>
                 <NavLink to="/inventory">Inventory</NavLink>
                 <NavLink to="/about">About</NavLink>
